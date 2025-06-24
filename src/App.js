@@ -109,29 +109,12 @@ const Disclaimer = ({ onAccept }) => (
     <div className="bg-white p-6 rounded-lg shadow-xl max-w-2xl w-full text-center border border-indigo-200">
         <h2 className="text-2xl font-bold mb-4 text-indigo-700">시작하기 전에</h2>
         <p className="mb-4 text-gray-700">
-            이 우울증 테스트는 PHQ-9 설문지를 기반으로
-              
-          <p className="mb-4 text-gray-700">
-            간략화된 버전입니다.
-            </p>
-        <p className="mb-4 text-gray-700">
-            **이 테스트는 의학적 진단이 아니며,
-            </p>
-            <p className="mb-4 text-gray-700">
-            전문적인 진단을 대체할 수 없습니다.**
-            </p>
+            이 우울증 테스트는 PHQ-9설문지를 기반으로 간략화된 버전입니다.
+            **이 테스트는 의학적 진단이 아니며, 전문적인 진단을 대체할 수 없습니다.**
         </p>
         <p className="mb-4 text-gray-700">
-            결과에 따라 우울감을 느끼시거나
-            </p>
-         <p className="mb-4 text-gray-700">  
-            정신 건강에 대한 우려가 있으시다면,
-          </p> 
-          <p className="mb-4 text-gray-700">
-            **반드시 정신건강의학과 전문의나
-            </p>
-         <p className="mb-4 text-gray-700">  
-            상담 전문가와 상담하시기 바랍니다.**
+            결과에 따라 우울감을 느끼시거나 정신 건강에 대한 우려가 있으시다면,
+            **반드시 정신건강의학과 전문의나 상담 전문가와 상담하시기 바랍니다.**
         </p>
         <p className="mb-6 text-gray-700">
             테스트를 시작하시려면 아래 버튼을 눌러주세요.
@@ -213,26 +196,30 @@ const Result = ({ score, onRestart }) => {
             <p className="text-xl mb-4 text-gray-800">
                 당신의 총점은 <span className="font-bold text-indigo-600 text-3xl">{score}</span>점입니다.
             </p>
-            <p className={`text-2xl font-bold mb-6 ${textColor}`}>
-                해석: {interpretation}
-            </p>
-            <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                {guidance}
-            </p>
+            <div className="mb-6">
+                <p className={`text-2xl font-bold mb-4 ${textColor}`}>
+                    해석: {interpretation}
+                </p>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                    <p className="text-lg text-gray-700 leading-relaxed text-left">
+                        {guidance}
+                    </p>
+                </div>
+            </div>
             <div className="mt-8 pt-4 border-t border-gray-200">
                 <h3 className="text-xl font-semibold mb-3 text-indigo-700">국내 유일 우울증 커뮤니티-마인드포트</h3>
                 <a 
                     href="https://cafe.naver.com/gamenet1111" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
+                    className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md mb-4"
                 >
                     우울증 털어내러 가기
                 </a>
             </div>
             <button
                 onClick={onRestart}
-                className="mt-8 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
+                className="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
             >
                 다시 테스트하기
             </button>
