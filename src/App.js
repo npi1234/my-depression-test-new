@@ -186,7 +186,7 @@ const Result = ({ score, onRestart }) => {
         interpretation = "중간에서 심한 우울증 (Moderately Severe Depression)";
         guidance = "중간에서 심한 정도의 우울 증상이 의심됩니다. 전문가의 도움이 시급할 수 있습니다. 즉시 정신건강의학과 전문의나 상담 전문가를 찾아 상담을 받아보시기를 강력히 권고합니다.";
         textColor = "text-red-600";
-    } else if (score >= 20 && score <= 27) {
+    } else if (score >= 20 && score <= 30) {
         interpretation = "심한 우울증 (Severe Depression)";
         guidance = "심한 우울 증상이 의심됩니다. 이는 전문가의 즉각적인 개입이 필요한 상태일 수 있습니다. 생명의 위험이 있다고 생각되면 즉시 응급 서비스나 정신건강의학과에 방문하세요. 가능한 한 빨리 정신건강의학과 전문의나 상담 전문가의 도움을 받으세요.";
         textColor = "text-purple-700";
