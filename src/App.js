@@ -107,7 +107,7 @@ const questionsData = [
 // Component for the initial disclaimer
 const Disclaimer = ({ onAccept }) => (
     <div className="bg-white p-6 rounded-lg shadow-xl max-w-2xl w-full text-center border border-indigo-200">
-        <h2 className="text-2xl font-bold mb-4 text-indigo-700">중요 면책 조항</h2>
+        <h2 className="text-2xl font-bold mb-4 text-indigo-700">시작하기 전에</h2>
         <p className="mb-4 text-gray-700">
             이 우울증 테스트는 PHQ-9 (Patient Health Questionnaire-9) 설문지를 기반으로 간략화된 버전입니다.
             **이 테스트는 의학적 진단이 아니며, 전문적인 진단을 대체할 수 없습니다.**
@@ -203,13 +203,15 @@ const Result = ({ score, onRestart }) => {
                 {guidance}
             </p>
             <div className="mt-8 pt-4 border-t border-gray-200">
-                <h3 className="text-xl font-semibold mb-3 text-indigo-700">도움이 필요하시면:</h3>
-                <ul className="text-left text-gray-600 list-disc list-inside space-y-2">
-                    <li><strong className="text-gray-800">정신건강복지센터:</strong> 국번 없이 1577-0199</li>
-                    <li><strong className="text-gray-800">자살 예방 핫라인:</strong> 1393</li>
-                    <li><strong className="text-gray-800">청소년 전화:</strong> 1388</li>
-                    <li>가까운 정신건강의학과 또는 상담 센터 방문</li>
-                </ul>
+                <h3 className="text-xl font-semibold mb-3 text-indigo-700">국내 유일 우울증 커뮤니티-마인드포트</h3>
+                <a 
+                    href="https://cafe.naver.com/gamenet1111" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
+                >
+                    우울증 털어내러 가기
+                </a>
             </div>
             <button
                 onClick={onRestart}
