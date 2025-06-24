@@ -228,7 +228,7 @@ const Result = ({ score, onRestart }) => {
                         rel="noopener noreferrer"
                         className="block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
                     >
-                        MBTI별 우울증 대처법
+                        MBTI별 우울증 해결법
                     </a>
                     <button 
                         onClick={handleCopyLink}
