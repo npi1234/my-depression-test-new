@@ -163,6 +163,8 @@ const Question = ({ question, onSelectOption, selectedAnswer }) => {
 
 // Component for displaying the test results and guidance
 const Result = ({ score, onRestart }) => {
+    const [copyMessage, setCopyMessage] = useState('');
+
     let interpretation = "";
     let guidance = "";
     let textColor = "";
@@ -189,6 +191,17 @@ const Result = ({ score, onRestart }) => {
         guidance = "심한 우울 증상이 의심됩니다. 이는 전문가의 즉각적인 개입이 필요한 상태일 수 있습니다. 생명의 위험이 있다고 생각되면 즉시 응급 서비스나 정신건강의학과에 방문하세요. 가능한 한 빨리 정신건강의학과 전문의나 상담 전문가의 도움을 받으세요.";
         textColor = "text-purple-700";
     }
+
+    const handleCopyLink = async () => {
+        try {
+            await navigator.clipboard.writeText('https://my-depression-test-rqtm.vercel.app/');
+            setCopyMessage('복사되었습니다.');
+            setTimeout(() => setCopyMessage(''), 2000); // 2초 후 메시지 사라짐
+        } catch (err) {
+            setCopyMessage('복사에 실패했습니다.');
+            setTimeout(() => setCopyMessage(''), 2000);
+        }
+    };
 
     return (
         <div className="bg-white p-6 rounded-lg shadow-xl max-w-2xl w-full text-center border border-indigo-200">
@@ -217,14 +230,15 @@ const Result = ({ score, onRestart }) => {
                     >
                         MBTI별 우울증 대처법
                     </a>
-                    <a 
-                        href="https://my-depression-test-rqtm.vercel.app/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
+                    <button 
+                        onClick={handleCopyLink}
+                        className="block w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
                     >
                         공유하기
-                    </a>
+                    </button>
+                    {copyMessage && (
+                        <p className="text-green-600 font-semibold mt-2">{copyMessage}</p>
+                    )}
                 </div>
             </div>
         </div>
