@@ -109,12 +109,18 @@ const Disclaimer = ({ onAccept }) => (
     <div className="bg-white p-6 rounded-lg shadow-xl max-w-2xl w-full text-center border border-indigo-200">
         <h2 className="text-2xl font-bold mb-4 text-indigo-700">시작하기 전에</h2>
         <p className="mb-4 text-gray-700">
-            이 우울증 테스트는 PHQ-9 (Patient Health Questionnaire-9) 설문지를 기반으로 간략화된 버전입니다.
-            **이 테스트는 의학적 진단이 아니며, 전문적인 진단을 대체할 수 없습니다.**
+            이 우울증 테스트는 PHQ-9 설문지를 기반으로
+            간략화된 버전입니다.
+
+            **이 테스트는 의학적 진단이 아니며,
+            전문적인 진단을 대체할 수 없습니다.**
         </p>
         <p className="mb-4 text-gray-700">
-            테스트 결과에 따라 우울감을 느끼시거나 정신 건강에 대한 우려가 있으시다면,
-            **반드시 정신건강의학과 전문의나 상담 전문가와 상담하시기 바랍니다.**
+            결과에 따라 우울감을 느끼시거나
+            정신 건강에 대한 우려가 있으시다면,
+
+            **반드시 정신건강의학과 전문의나
+            상담 전문가와 상담하시기 바랍니다.**
         </p>
         <p className="mb-6 text-gray-700">
             테스트를 시작하시려면 아래 버튼을 눌러주세요.
